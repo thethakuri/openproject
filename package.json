@@ -7,7 +7,6 @@
     "karma": "cd frontend && npm run karma && cd ..",
     "webpack": "cd frontend && npm run webpack && cd ..",
     "webpack-watch": "cd frontend && npm run webpack-watch"
-    "build" : "webpack --config webpack.production.config.js"
   },
   "private": true,
   "dependencies": {
