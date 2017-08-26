@@ -60,7 +60,7 @@
     "test": "npm run karma",
     "karma": "./scripts/karma-runner.js",
     "postinstall": "./node_modules/.bin/bower install --config.interactive=false",
-    "webpack": "./node_modules/.bin/webpack --colors --progress",
+    "webpack": "./modules/.bin/webpack --colors --progress",
     "webpack-watch": "npm run webpack -- --watch --cache"
   }
 }
