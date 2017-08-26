@@ -49,8 +49,7 @@ namespace :assets do
   task :webpack do
     Dir.chdir Rails.root.join('frontend') do
       # Directory Not Found error
-      webpack_directory='webpack'
-      Dir.mkdir($(npm bin)/webpack_directory) unless File.exists?($(npm bin)/webpack_directory)
+      Dir.mkdir('node_modules/.bin/webpack')
       sh '$(npm bin)/webpack --config webpack.production.config.js'
     end
   end
