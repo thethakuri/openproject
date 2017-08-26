@@ -30,6 +30,8 @@
 # Based on a Snippet by Tom Dooner. See:
 # http://www.tomdooner.com/2014/05/26/webpack.html
 
+require 'fileutils'
+
 # The webpack task must run before assets:environment task.
 # Otherwise Sprockets cannot find the files that webpack produces.
 Rake::Task['assets:precompile']
@@ -49,7 +51,7 @@ namespace :assets do
   task :webpack do
     Dir.chdir Rails.root.join('frontend') do
       # Directory Not Found error
-      Dir.mkdir('node_modules/.bin/webpack')
+      FileUtils.mkpath 'node_modules/.bin/webpack'
       sh '$(npm bin)/webpack --config webpack.production.config.js'
     end
   end
