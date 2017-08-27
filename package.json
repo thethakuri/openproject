@@ -5,7 +5,7 @@
     "postinstall": "cd frontend && npm install",
     "test": "cd frontend && npm test && cd ..",
     "karma": "cd frontend && npm run karma && cd ..",
-    "webpack": "cd frontend && npm i webpack --save-dev && npm run webpack && cd ..",
+    "webpack": "cd frontend && npm remove webpack -g && npm i webpack --save-dev && npm run webpack && cd ..",
     "webpack-watch": "cd frontend && npm run webpack-watch"
   },
   "private": true,
